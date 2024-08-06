@@ -1,16 +1,16 @@
-import './App.css';
-import Counter from './Counter';
+import "./App.css";
+import Counter from "./Counter";
 // import ClassBind from './ClassBind';
-import SyntheticEvent from './SyntheticEvent';
+import SyntheticEvent from "./SyntheticEvent";
 
 function App() {
   return (
     <div className="App">
-      <SyntheticEvent/>
+      <SyntheticEvent />
       <br />
       {/* <ClassBind/> */}
       <br />
-      <Counter/>
+      <Counter />
     </div>
   );
 }

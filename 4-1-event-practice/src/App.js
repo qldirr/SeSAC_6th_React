@@ -1,16 +1,16 @@
-import './App.css';
-import ChangeColor from './components/ex/ChangeColor';
-import HandleEx from './components/ex/HandleEx';
-import ToggleText from './components/ex/ToggleText';
+import "./App.css";
+import ChangeColor from "./components/ex/ChangeColor";
+import HandleEx from "./components/ex/HandleEx";
+import ToggleText from "./components/ex/ToggleText";
 
 function App() {
   return (
     <div className="App">
-      <HandleEx/>
+      <HandleEx />
       <hr />
-      <ChangeColor/>
+      <ChangeColor />
       <hr />
-      <ToggleText/>
+      <ToggleText />
     </div>
   );
 }
