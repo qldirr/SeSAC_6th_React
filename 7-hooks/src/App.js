@@ -1,7 +1,8 @@
 import './App.css';
+import Form from './components/react-hook-form/Form';
 // import UseCallBackEx from './components/UseCallBackEx';
 // import UseCallBackEx2 from './components/UseCallBackEx2';
-import UseReducerEx from './components/UseReducerEx';
+// import UseReducerEx from './components/UseReducerEx';
 import useTitle from './hooks/useTitle';
 // import UseMemoEx from './components/UseMemoEx';
 
@@ -15,8 +16,9 @@ function App() {
       <hr />
       <UseCallBackEx2 postId = {7}/>
       <hr /> */}
-      <UseReducerEx/>
-      <hr />
+      {/* <UseReducerEx/>
+      <hr /> */}
+      <Form/>
     </div>
   );
 }
