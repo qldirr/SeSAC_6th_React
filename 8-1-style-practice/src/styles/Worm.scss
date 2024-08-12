@@ -1,0 +1,62 @@
+// 참고. css 코드
+
+@mixin body($top, $left, $bgColor){
+    top: $top;
+    left: $left;
+    background-color: $bgColor;
+}
+
+.larva{
+    position: relative;
+
+    .body{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+
+        &.body1{
+            @include body(100px, 100px, rgb(0, 0, 166));
+            .eye{
+                border-radius: 50%;
+                position: absolute;
+                &.eye-white{
+                    background-color: white;
+                    width: 50px;
+                    height: 50px;
+                }
+                &.eye-black{
+                    width: 25px;
+                    height: 25px;
+                    top: 12px;
+                    left: 10px;
+                    background-color: black;
+                }
+            }
+        }
+        &.body2{
+            @include body(150px, 160px, rgb(36, 61, 206));
+        }
+        &.body3{
+            @include body(190px, 200px, rgb(52, 118, 231));
+        }
+        &.body4{
+            @include body(240px, 220px, rgb(47, 146, 233));
+        }
+        &.body5{
+            @include body(280px, 280px, rgb(140, 191, 253));
+            z-index: 10;
+        }
+    }
+
+    .grass {
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        top: 130px;
+        left: 50px;
+        z-index: -1;
+    }
+}
+
+
