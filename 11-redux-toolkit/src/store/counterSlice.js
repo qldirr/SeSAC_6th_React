@@ -19,13 +19,19 @@ const counterSlice = createSlice({
     name: 'counter',   // 즉 plus 액션은 'counter/plus'라는 타입
     initialState: { number: 100 },
     reducers: {
-        plus: (state) => {
-            state.number += 1    // 상태를 직접 변경(immer 라이브러리 내부적으로 사용)
+        plus: (state, action) => {
+            state.number += action.payload    // 상태를 직접 변경(immer 라이브러리 내부적으로 사용)
         },
-        minus: (state) => {
-            state.number -= 1
+        minus: (state, action) => {
+            state.number -= action.payload
         }
     }
+})
+
+// 액션 생성자 커스터마이징
+export const add = (payload) => ({
+    type:'counter/add',
+    payload,
 })
 
 // Redux Toolkit 은 immer 라이브러리를 사용해 상태를 직접 변경하는 것처럼 보이지만
